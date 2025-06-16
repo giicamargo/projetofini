@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cada item agora inclui uma 'explicacao' detalhada
     const notasDisciplinas = {
         matematica: [
-            { tipo: 'Relatório Bimestral', nota: 8.5, explicacao: 'Relatório sobre a análise de gráficos e funções, cobrindo o primeiro bimestre.' },
+            { tipo: 'Relatórios de experimentos e pesquisas realizados', nota: 8.5, explicacao: 'tema 01: análise de gráficos e funções; tema 02 cobrindo o primeiro bimestre.' },
             { tipo: 'Prova 1º Semestre', nota: 7.0, explicacao: 'Avaliação teórica abrangendo os tópicos de Álgebra e Geometria do primeiro semestre.' },
             { tipo: 'Atividade em Grupo', nota: 9.2, explicacao: 'Resolução de problemas complexos em equipe, focando em lógica e raciocínio.' },
             { tipo: 'Trabalho Final', nota: 8.0, explicacao: 'Projeto individual de aplicação de conceitos matemáticos em um problema real.' }
