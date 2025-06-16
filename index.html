@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Escolar - Cabeçalho</title>
+    <title>Portfólio Escolar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="cabecalho">
-        <h1>Portfólio Escolar</h1>
+        <h1 class="titulo-portfolio">Portfólio Escolar</h1>
         <nav class="menu-disciplinas">
-            <button class="botao-disciplinas">Disciplinas</button>
-            <div class="dropdown-conteudo">
-                <a href="matematica">Matemática</a>
-                <a href="fisica">Física</a>
-                <a href="filosofia">Filosofia</a>
-                <a class="last-discipline" href="#sociologia">Sociologia</a>
+            <button class="botao-disciplinas" id="btnDisciplinas">Disciplinas</button>
+            <div class="dropdown-conteudo" id="dropdownDisciplinas">
+                <a href="15/06/2025" data-discipline="matematica">Matemática</a>
+                <a href="15/06/2025" data-discipline="fisica">Física</a>
+                <a href="15/06/2025" data-discipline="filosofia">Filosofia</a>
+                <a href="15/06/2025" data-discipline="sociologia">Sociologia</a>
             </div>
         </nav>
     </header>
 
-    <div style="padding: 20px; text-align: center;">
-        <p>Este é o conteúdo do seu portfólio. As disciplinas podem ser acessadas pelo menu acima.</p>
-    </div>
+    <main class="conteudo-principal">
+        <div id="cardsContainer" class="cards-container">
+            <p class="mensagem-inicial">Selecione uma disciplina no menu acima para ver as notas.</p>
+        </div>
+    </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
