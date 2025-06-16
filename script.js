@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Você pode expandir ou carregar isso de uma API real no futuro!
     const notasDisciplinas = {
         matematica: [
-            { tipo: 'Relatório Bimestral', nota: 8.5 },
-            { tipo: 'Prova 1º Semestre', nota: 7.0 },
+            { tipo: 'Provas', conteudo 1: 8,6,  conteudo 2: 9,2,  conteudo 3: 10 },
+            { tipo: 'Atividades',  },
             { tipo: 'Atividade em Grupo', nota: 9.2 },
             { tipo: 'Trabalho Final', nota: 8.0 }
         ],
