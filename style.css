@@ -7,7 +7,7 @@ body {
 
 /* --- Cabeçalho --- */
 .cabecalho {
-    background-color: #28a745; /* Verde vibrante */
+    background-color: #8f36ca; 
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -120,7 +120,7 @@ body {
 }
 
 .card-nota h3 {
-    color: #28a745; /* Verde para o título do card */
+    color: #f152ea; /* Verde para o título do card */
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 1.5em;
