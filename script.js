@@ -6,82 +6,78 @@ document.addEventListener('DOMContentLoaded', () => {
     const disciplinaLinks = dropdownDisciplinas.querySelectorAll('a');
 
     // Dados de exemplo das notas dos alunos para cada disciplina
-    // Você pode expandir ou carregar isso de uma API real no futuro!
+    // Cada item agora inclui uma 'explicacao' detalhada
     const notasDisciplinas = {
         matematica: [
-            { tipo: 'Relatório Bimestral', nota: 8.5 },
-            { tipo: 'Prova 1º Semestre', nota: 7.0 },
-            { tipo: 'Atividade em Grupo', nota: 9.2 },
-            { tipo: 'Trabalho Final', nota: 8.0 }
+            { tipo: 'Relatório Bimestral', nota: 8.5, explicacao: 'Relatório sobre a análise de gráficos e funções, cobrindo o primeiro bimestre.' },
+            { tipo: 'Prova 1º Semestre', nota: 7.0, explicacao: 'Avaliação teórica abrangendo os tópicos de Álgebra e Geometria do primeiro semestre.' },
+            { tipo: 'Atividade em Grupo', nota: 9.2, explicacao: 'Resolução de problemas complexos em equipe, focando em lógica e raciocínio.' },
+            { tipo: 'Trabalho Final', nota: 8.0, explicacao: 'Projeto individual de aplicação de conceitos matemáticos em um problema real.' }
         ],
         fisica: [
-            { tipo: 'Relatório Laboratório', nota: 9.0 },
-            { tipo: 'Prova Bimestral', nota: 7.5 },
-            { tipo: 'Atividade Prática', nota: 8.8 },
-            { tipo: 'Exame Final', nota: 7.9 }
+            { tipo: 'Relatório Laboratório', nota: 9.0, explicacao: 'Relatório detalhado da experiência sobre Leis de Newton, com gráficos e conclusões.' },
+            { tipo: 'Prova Bimestral', nota: 7.5, explicacao: 'Avaliação sobre Cinemática e Dinâmica, incluindo questões conceituais e problemas.' },
+            { tipo: 'Atividade Prática', nota: 8.8, explicacao: 'Construção de um protótipo simples aplicando princípios de física mecânica.' },
+            { tipo: 'Exame Final', nota: 7.9, explicacao: 'Exame cumulativo cobrindo todos os tópicos do ano letivo.' }
         ],
         filosofia: [
-            { tipo: 'Ensaio Filosófico', nota: 9.5 },
-            { tipo: 'Debate em Classe', nota: 8.0 },
-            { tipo: 'Prova Escrita', nota: 7.8 },
-            { tipo: 'Projeto de Pesquisa', nota: 9.3 }
+            { tipo: 'Ensaio Filosófico', nota: 9.5, explicacao: 'Ensaio argumentativo sobre o existencialismo e suas implicações contemporâneas.' },
+            { tipo: 'Debate em Classe', nota: 8.0, explicacao: 'Participação ativa e argumentação coerente no debate sobre ética e moral.' },
+            { tipo: 'Prova Escrita', nota: 7.8, explicacao: 'Avaliação sobre pensadores pré-socráticos e a filosofia clássica grega.' },
+            { tipo: 'Projeto de Pesquisa', nota: 9.3, explicacao: 'Pesquisa aprofundada sobre a teoria do conhecimento de Immanuel Kant.' }
         ],
         sociologia: [
-            { tipo: 'Pesquisa de Campo', nota: 8.7 },
-            { tipo: 'Seminário Apresentação', nota: 9.1 },
-            { tipo: 'Prova Conceitual', nota: 7.2 },
-            { tipo: 'Análise de Texto', nota: 8.5 }
+            { tipo: 'Pesquisa de Campo', nota: 8.7, explicacao: 'Levantamento de dados sobre desigualdade social na comunidade local.' },
+            { tipo: 'Seminário Apresentação', nota: 9.1, explicacao: 'Apresentação em grupo sobre os desafios da globalização e seus impactos sociais.' },
+            { tipo: 'Prova Conceitual', nota: 7.2, explicacao: 'Avaliação sobre os conceitos fundamentais de Durkheim, Weber e Marx.' },
+            { tipo: 'Análise de Texto', nota: 8.5, explicacao: 'Análise crítica de um artigo científico sobre movimentos sociais no Brasil.' }
         ]
     };
 
     // Função para alternar a visibilidade do dropdown ao clicar no botão "Disciplinas"
     btnDisciplinas.addEventListener('click', (event) => {
-        // Alterna entre 'block' (visível) e 'none' (oculto)
         dropdownDisciplinas.style.display = dropdownDisciplinas.style.display === 'block' ? 'none' : 'block';
-        event.stopPropagation(); // Impede que o clique se propague para o documento, evitando que o dropdown feche imediatamente
+        event.stopPropagation(); // Impede que o clique se propague para o document
     });
 
-    // Fecha o dropdown se o usuário clicar em qualquer lugar fora do botão ou do próprio dropdown
+    // Fecha o dropdown se clicar fora dele
     document.addEventListener('click', (event) => {
-        // Verifica se o clique não foi no botão e não foi dentro do dropdown
         if (!btnDisciplinas.contains(event.target) && !dropdownDisciplinas.contains(event.target)) {
             dropdownDisciplinas.style.display = 'none';
         }
     });
 
-    // Adiciona um ouvinte de evento para cada link de disciplina no dropdown
+    // Lidar com cliques nos links das disciplinas
     disciplinaLinks.forEach(link => {
         link.addEventListener('click', (event) => {
-            event.preventDefault(); // Impede o comportamento padrão do link (que recarregaria a página)
-            dropdownDisciplinas.style.display = 'none'; // Fecha o dropdown após a seleção
+            event.preventDefault(); // Evita que a página recarregue
+            dropdownDisciplinas.style.display = 'none'; // Fecha o dropdown
 
-            // Pega o nome da disciplina do atributo 'data-discipline' do link
             const disciplinaSelecionada = event.target.dataset.discipline;
-            // Chama a função para exibir os cards da disciplina selecionada
             renderizarCards(disciplinaSelecionada);
         });
     });
 
-    // Função para criar e exibir os cards de notas na tela
+    // Função para renderizar os cards de notas com suas explicações
     function renderizarCards(disciplina) {
-        cardsContainer.innerHTML = ''; // Limpa qualquer card existente
+        cardsContainer.innerHTML = ''; // Limpa os cards existentes
 
-        // Obtém as notas da disciplina selecionada do objeto 'notasDisciplinas'
         const notas = notasDisciplinas[disciplina];
 
         if (notas && notas.length > 0) {
-            // Itera sobre cada item de nota e cria um card para ele
             notas.forEach(item => {
-                const card = document.createElement('div'); // Cria um novo elemento <div>
-                card.classList.add('card-nota'); // Adiciona a classe CSS para estilização
+                const card = document.createElement('div');
+                card.classList.add('card-nota');
                 card.innerHTML = `
                     <h3>${item.tipo}</h3>
                     <p>Nota: <strong>${item.nota.toFixed(1)}</strong></p>
+                    <div class="card-explicacao">
+                        <p>${item.explicacao}</p>
+                    </div>
                 `;
-                cardsContainer.appendChild(card); // Adiciona o card ao contêiner na página
+                cardsContainer.appendChild(card);
             });
         } else {
-            // Exibe uma mensagem se não houver notas para a disciplina
             cardsContainer.innerHTML = `<p class="mensagem-inicial">Nenhuma nota encontrada para ${disciplina.charAt(0).toUpperCase() + disciplina.slice(1)}.</p>`;
         }
     }
