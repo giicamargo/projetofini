@@ -1,8 +1,8 @@
 body {
     font-family: 'Elegante', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f0f2f5; /* Fundo cinza claro */
-    color: #333; /* Cor do texto padrão */
+    background-color: #f0f2f5; 
+    color: #333; 
 }
 
 /* --- Cabeçalho --- */
@@ -11,25 +11,23 @@ body {
     color: white;
     padding: 15px 20px;
     display: flex;
-    justify-content: space-between; /* Espaçamento entre o título e o menu */
+    justify-content: space-between; 
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; /* Essencial para o posicionamento do título */
-    z-index: 1001; /* Garante que o cabeçalho fique por cima */
+    position: relative; 
+    z-index: 1001; 
 }
 
 .cabecalho .titulo-portfolio {
     margin: 0;
     font-size: 2em;
     font-weight: bold;
-    /* Centraliza o título independentemente do botão do lado direito */
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    white-space: nowrap;
 }
 
-/* --- Menu de Disciplinas (Dropdown) --- */
 .menu-disciplinas {
     position: relative;
     display: inline-block;
