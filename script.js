@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
             { tipo: 'Trabalho', nota: 9.3, explicacao: 'Pesquisa aprofundada sobre a teoria do conhecimento de Immanuel Kant.' }
         ],
         sociologia: [
-            { tipo: 'Pesquisa de Campo', nota: 8.7, explicacao: 'Levantamento de dados sobre desigualdade social na comunidade local.' },
-            { tipo: 'Seminário Apresentação', nota: 9.1, explicacao: 'Apresentação em grupo sobre os desafios da globalização e seus impactos sociais.' },
+            { tipo: 'Atividades', nota: 8.7, explicacao: 'Levantamento de dados sobre desigualdade social na comunidade local.' },
+            { tipo: 'Trabalho', nota: 9.1, explicacao: 'Apresentação em grupo sobre os desafios da globalização e seus impactos sociais.' },
             { tipo: 'Prova Conceitual', nota: 7.2, explicacao: 'Avaliação sobre os conceitos fundamentais de Durkheim, Weber e Marx.' },
-            { tipo: 'Análise de Texto', nota: 8.5, explicacao: 'Análise crítica de um artigo científico sobre movimentos sociais no Brasil.' }
+            { tipo: 'Relatorio', nota: 8.5, explicacao: 'Análise crítica de um artigo científico sobre movimentos sociais no Brasil.' }
         ]
     };
 
