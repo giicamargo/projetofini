@@ -12,19 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
             { tipo: 'Relatórios de conteudos e pesquisas realizadas', nota: 8.5, explicacao: 'análise de gráficos e funções; álgebra, teoria dos números, geometria e aritmética.' },
             { tipo: 'Prova 1º Semestre', nota: 7.0, explicacao: 'Avaliação teórica abrangendo os tópicos de Álgebra e Geometria do primeiro semestre.' },
             { tipo: 'Atividade em Grupo', nota: 9.2, explicacao: 'Resolução de problemas complexos em equipe, focando em lógica e raciocínio.' },
-            { tipo: 'Trabalho Final', nota: 8.0, explicacao: 'Projeto individual de aplicação de conceitos matemáticos em um problema real.' }
+            { tipo: 'Trabalhos', nota: 8.0, explicacao: 'Projeto individual de aplicação de conceitos matemáticos em um problema real.' }
         ],
         fisica: [
             { tipo: 'Relatório Laboratório', nota: 9.0, explicacao: 'Relatório detalhado da experiência sobre Leis de Newton, com gráficos e conclusões.' },
             { tipo: 'Prova Bimestral', nota: 7.5, explicacao: 'Avaliação sobre Cinemática e Dinâmica, incluindo questões conceituais e problemas.' },
             { tipo: 'Atividade Prática', nota: 8.8, explicacao: 'Construção de um protótipo simples aplicando princípios de física mecânica.' },
-            { tipo: 'Exame Final', nota: 7.9, explicacao: 'Exame cumulativo cobrindo todos os tópicos do ano letivo.' }
+            { tipo: 'Trabalhos', nota: 7.9, explicacao: 'Exame cumulativo cobrindo todos os tópicos do ano letivo.' }
         ],
         filosofia: [
-            { tipo: 'Ensaio Filosófico', nota: 9.5, explicacao: 'Ensaio argumentativo sobre o existencialismo e suas implicações contemporâneas.' },
-            { tipo: 'Debate em Classe', nota: 8.0, explicacao: 'Participação ativa e argumentação coerente no debate sobre ética e moral.' },
-            { tipo: 'Prova Escrita', nota: 7.8, explicacao: 'Avaliação sobre pensadores pré-socráticos e a filosofia clássica grega.' },
-            { tipo: 'Projeto de Pesquisa', nota: 9.3, explicacao: 'Pesquisa aprofundada sobre a teoria do conhecimento de Immanuel Kant.' }
+            { tipo: 'Relatório', nota: 9.5, explicacao: 'Ensaio argumentativo sobre o existencialismo e suas implicações contemporâneas.' },
+            { tipo: 'Provas', nota: 8.0, explicacao: 'Participação ativa e argumentação coerente no debate sobre ética e moral.' },
+            { tipo: 'Atividades', nota: 7.8, explicacao: 'Avaliação sobre pensadores pré-socráticos e a filosofia clássica grega.' },
+            { tipo: 'Trabalho', nota: 9.3, explicacao: 'Pesquisa aprofundada sobre a teoria do conhecimento de Immanuel Kant.' }
         ],
         sociologia: [
             { tipo: 'Pesquisa de Campo', nota: 8.7, explicacao: 'Levantamento de dados sobre desigualdade social na comunidade local.' },
